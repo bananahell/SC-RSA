@@ -34,6 +34,7 @@ uint64_t getRandBits(uint8_t bits) {
     }
     number <<= 1;
   }
+  number >>= 1;
   return number;
 }
 
@@ -41,7 +42,7 @@ uint64_t getPrime(uint8_t bits) {
   uint64_t number;
   while (1) {
     number = getRandBits(bits);
-    number |= (uint64_t)(pow(2, bits)) | 1;
+    number |= (uint64_t)(pow(2, bits - 1)) | 1;
     if (isPrime(number) == 0) {
       break;
     }

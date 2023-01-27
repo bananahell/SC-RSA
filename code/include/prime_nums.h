@@ -1,5 +1,5 @@
-#ifndef PRIME_NUMS
-#define PRIME_NUMS
+#ifndef PRIME_NUMS_H
+#define PRIME_NUMS_H
 
 #include <stdint.h>
 
@@ -35,4 +35,4 @@ uint64_t getPrime(uint8_t);
  */
 uint64_t modPow(uint64_t, uint64_t, uint64_t);
 
-#endif /* PRIME_NUMS */
+#endif /* PRIME_NUMS_H */
