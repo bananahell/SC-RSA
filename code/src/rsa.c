@@ -32,7 +32,10 @@ uint64_t getHighestCoprime(uint64_t p, uint64_t q) {
       if (primesAux != NULL) {
         primes = primesAux;
         primes[count - 1] = PRIMES10K[i];
-        if ((fi_nAux /= PRIMES10K[i]) == 1) {
+        while ((fi_nAux % PRIMES10K[i]) == 0) {
+          fi_nAux /= PRIMES10K[i];
+        }
+        if (fi_nAux == 1) {
           break;
         }
       } else {
