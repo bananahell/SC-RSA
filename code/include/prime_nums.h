@@ -26,6 +26,8 @@ uint64_t getRandBits(uint8_t);
  */
 uint64_t getPrime(uint8_t);
 
+uint64_t mulmod(uint64_t a, uint64_t b, uint64_t mod);
+
 /**
  * @brief Power modulus operation.
  * @param base Base of the power operation.
@@ -34,5 +36,7 @@ uint64_t getPrime(uint8_t);
  * @return (base ^ exp) % mod
  */
 uint64_t modPow(uint64_t, uint64_t, uint64_t);
+
+uint8_t isPrimeMiller(uint64_t number, unsigned int accuracy);
 
 #endif /* PRIME_NUMS_H */

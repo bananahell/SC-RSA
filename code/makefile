@@ -17,7 +17,7 @@ LIBS =
 INC_PATHS = -I$(INC_PATH)
 
 ##### Compile directives
-FLAGS = -ansi -Wall -pedantic -Wextra -Werror=init-self -lm
+FLAGS = -ansi -Wall -pedantic -Wextra -Werror=init-self -lm -std=c99
 ##### Extra debugging directives
 DFLAGS = -ggdb -O0 -DDEBUG -g
 ##### Extra release directives

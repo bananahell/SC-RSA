@@ -17,7 +17,8 @@
  */
 
 int main() {
-  uint64_t bitSize = 4;
+  srand(time(NULL));
+  uint64_t bitSize = 63;
   uint64_t p1 = getPrime(bitSize);
   uint64_t q1 = getPrime(bitSize);
   uint64_t n1 = p1 * q1;
@@ -34,7 +35,18 @@ int main() {
   uint64_t sent[2];
   uint64_t i;
   printf("\n");
-  srand(time(NULL));
+  // srand(time(NULL));
+
+  // isPrimeMiller(7,5);
+  // isPrimeMiller(735301111289,5) ? printf("PRIME\n") : printf("NOT PRIME\n");
+  // isPrimeMiller(967,5);
+  // isPrimeMiller(7789,5);
+  // isPrimeMiller(4,5);
+  // isPrimeMiller(77,5);
+  // isPrimeMiller(501,5);
+  // isPrimeMiller(7778,5);
+
+  // printf("getPrime = %ld\n", getPrime(55));
 
   printf("Sender:\n\n");
 
