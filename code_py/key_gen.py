@@ -71,7 +71,7 @@ def genKeys():
     print('d: ', d)
     print((d*e)%fi_N)
 
-    return {'privateKey': (e,N), 'publicKey': (d,N)}
+    return (e,N), (d,N)
       
 
     
