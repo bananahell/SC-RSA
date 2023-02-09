@@ -48,28 +48,29 @@ def isPrime(number, accuracy):
 
 def genKeys():
     p = genPrimeNumber(1024);
-    print("p: ", p)
     while (1):
       q = genPrimeNumber(1024);
       if (q != p): break
-    print("q: ", q)
     N = p*q
-    print("N: ", N)
     fi_N = (p-1)*(q-1)
-    print("fi_N: ", fi_N)
 
     for e in range(fi_N-1, -1, -1):
       if (e % p != 0 and e % q != 0):
          if (getGCD(e,fi_N) == 1):
             break
 
-    print("e: ", e) 
-    print(getGCD(e,fi_N))
-    print(getGCD(e,N))
+   #  print(getGCD(e,fi_N))
+   #  print(getGCD(e,N))
 
     d = (fi_N * 5) - 1
-    print('d: ', d)
-    print((d*e)%fi_N)
+   #  print((d*e)%fi_N)
+
+    print('Gerando chaves ----------------------------------')
+    print("Numeros primos escolhidos: ")
+    print(f"p: {p}\n")
+    print(f"q: {q}\n")
+    print(f"p*q = N: {N}\n")
+    print(f"fi_N: {fi_N}\n")
 
     return (e,N), (d,N)
       
